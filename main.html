@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Help</title>
+</head>
+<style>
+    #navbar {
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 48px;
+        width: 480px;
+        background-color: #eecefd;
+    }
+    .grid-container {
+        margin: 4px 0px;
+        width: 480px;
+        display: grid;
+        grid-gap: 4px;
+        grid-template-areas:
+            'main main'
+            'main main';    
+    }
+    .click {
+        text-decoration: none;
+    }
+    .block {
+        height: 160px;
+        padding: 16px 8px;
+        text-align: center;
+    }
+    .choice {
+        margin: 4px;
+        background-color: #EFEFEF;
+    }
+</style>
+<body>
+    <div id="navbar">
+        <a href="main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Master Keying Help</b></h3></p>for security professionals</b></div>
+        <div>sign in</div>
+    </div>
+    <div class="grid-container">
+        <a href="learn.html" class="click">
+            <div id="learn" class="block" style="background-color: lightgreen; ">
+            <h2>Learn</h2>about master keying,<br>from basic to advanced.</div></a>
+        <a href="test.html" class="click">
+            <div id="test" class="block" style="background-color: #ffc72f;">
+            <h2>Test</h2>your knowledge<br>with quizzes and games.</div></a>
+        <a href="design.html" style="text-decoration: none;">
+            <div id="design" class="block" style="background-color: lightblue; ">
+            <h2>Design</h2>a master key system with<br>our free cloud-based software.</div></a>
+        <a href="help.html" style="text-decoration: none;">
+            <div id="help" class="block" style="background-color: #DF9F9F;">
+            <h2>Get help</h2>and/or advice from a<br>Certified Master Locksmith.</div></a>
+    </div>
+    <script></script>
+</body>
+</html>
