@@ -44,4 +44,4 @@ this project is certainly no exception. Anyone who views this information is fre
 share such knowledge with other locksmiths, as long as they do so in a form which does
 not violate the copyright.
 
-tldr: Share but don't plagiarise, do good and not evil.
+tldr: Share but don't plagiarise. Do good, not evil.
