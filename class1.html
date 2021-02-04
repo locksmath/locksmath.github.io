@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW1</title>
+</head>
+<style>
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 48px;
+        width: 320px;
+        background-color: #EFDFF7;
+    }
+    .choice {
+        margin: 4px;
+        border-radius: 4px;
+        background-color: #EFEFEF;
+    }
+</style>
+<body>
+    <div id="navbar">
+        <img src="schematic3.png"; height= 90%>
+        <b>Master Keying Fundamentals</b>
+    </div>
+    <div id="score" style="padding: 0px 8px; background-color: lightgoldenrodyellow; width: max-content;">
+        Welcome, ALOA Master Keying students. This<br>
+        homework assignment has two parts. Part one<br>
+        is multiple choice questions. When you click<br>
+        on your answer, it will immediately turn green<br>
+        if you choose correctly, or red if you chose<br>
+        incorrectly. At the end, you will have the option<br>
+        to either submit your score or start over. There<br>
+        is no limit to how many times you can start<br>
+        over. The score resets each time. When you are<br>
+        ready, click "start".
+    </div>
+    <div id="chapter">
+    </div>
+    <script>
+        var quizFileName = "class1.json"
+    </script>
+    <script src="quiz2.js"></script>
+</body>
+</html>
