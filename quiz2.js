@@ -1,12 +1,10 @@
 // QuizItems is an array. Question zero is empty. Start with question 1.
 // If there's a "none of the above" or "all of the above" answer, it should be option[0].
 // Otherwise, option[0] should be a blank string, which is ignored.
-var endOfQuiz;
 var main = document.getElementById('chapter');
 var scoreBoard = document.getElementById('score')
-var i, points, possible, correct;
-var quizItems;
-var tally;
+var i, points, possible, correct, quizItems, endOfQuiz, tally;
+
 
 fetch(quizFileName)
     .then(x => x.json())
@@ -23,7 +21,7 @@ function startQuiz() {
     tally = "Results: ";
     scoreBoard.innerHTML = `<h3>Your score so far: ${points} out of ${possible}</h3>`;
     endOfQuiz = quizItems.length
-    i = 1; // Go to first question.
+    i = 1; // Ready for first question.
     askQuestion();
 }
 
@@ -87,7 +85,14 @@ function toggle(n) {
 
 function nextQuestion() { i++; askQuestion() }
 function submit() {
-    win = window.open(`mailto:locksmath@outlook.com?subject=Ch1_quiz_results&body=${tally}`);
+    fetch('quizresults.json',{
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(tally)
+    })
+    // win = window.open(`mailto:locksmath@outlook.com?subject=Ch1_quiz_results&body=${tally}`);
     // chapterNumber ++;
     // window.location.href = `chapter${chapterNumber}.html`
 }
