@@ -7,12 +7,13 @@
 </head>
 <style>
     #navbar {
+        grid-area: header;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        height: 48px;
-        width: 320px;
-        background-color: #EFDFF7;
+        height: 64px;
+        width: 720px;
+        background-color: #eecefd;
     }
     .choice {
         margin: 4px;
@@ -22,26 +23,30 @@
 </style>
 <body>
     <div id="navbar">
-        <img src="schematic3.png"; height= 90%>
-        <b>Master Keying Fundamentals</b>
+        <a href="main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Master Keying Fundamentals</b></h3></p>Spring 2021</b></div>
+        <div>you are signed in as:<br>Guest314159</div>
     </div>
-    <div id="score" style="padding: 0px 8px; background-color: lightgoldenrodyellow; width: max-content;">
-        Welcome, ALOA Master Keying students. This<br>
-        homework assignment has two parts. Part one<br>
-        is multiple choice questions. When you click<br>
-        on your answer, it will immediately turn green<br>
-        if you choose correctly, or red if you chose<br>
-        incorrectly. At the end, you will have the option<br>
-        to either submit your score or start over. There<br>
-        is no limit to how many times you can start<br>
-        over. The score resets each time. When you are<br>
-        ready, click "start".
+    <div id="upper" style="padding: 8px 8px; background-color: #BFFFBF; width: 704px;">
+        There are some important things that all locksmiths should know about Master Keying. In this lesson, we
+        cover the mechanics of split pin master keying, what can go wrong, incidental master keys, different methods
+        of master keying, construction master keying, multiplex keyways, and more. You will also learn the Eight
+        Rules of Master Keying which will help keep you and your employees out of trouble.<br>
+        <br>
+        <a href="main.html"><img src="correct3.gif"; height= 150px></a>
+        <br>
+        The quiz is multiple choice. When you click on your answer, it will immediately turn green if you chose
+        correctly, or red if you chose incorrectly. At the end, you will have the option to either submit your score,
+        or start over. There is no limit to how many times you can start over. The score resets each time. When you
+        are ready, click "Start quiz."
     </div>
-    <div id="chapter">
+    <div id="lower" style="padding: 8px 8px; background-color: lightgoldenrodyellow; width: 704px;">
     </div>
     <script>
-        var quizFileName = "class1.json"
+        var classNumber = 1;
+        var quizFileName = "class1.json";
     </script>
-    <script src="quiz2.js"></script>
+    <script src="quiz.js"></script>
 </body>
 </html>
