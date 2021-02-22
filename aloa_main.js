@@ -1,9 +1,3 @@
-// localStorage.clear();
-localStorage.setItem("prog3",3);
-localStorage.setItem("prog4",2);
-localStorage.setItem("prog5",3);
-localStorage.setItem("prog6",2);
-localStorage.setItem("prog7",1);
 var TOC = [ {} , {
     "fileName" : "welcome.html", "active" : true, "title" : "Introduction",
         "description" : "What to expect<br>from this class" } , {

@@ -1,0 +1,42 @@
+.banner {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 64px;
+    width: 720px;
+    background-color: #eecefd;
+}
+.grid-container {
+    margin: 4px 0px;
+    width: 720px;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-areas:
+        'main main main main'
+        'main main main main';    
+}
+#upper {
+    width: 704px;
+    padding: 8px 8px;
+    background-color: #CFFFCF;
+}   
+#lower {
+    width: 704px;
+    padding: 8px 8px;
+    background-color: lightgoldenrodyellow;
+}
+.click {
+    text-decoration: none;
+}
+.block {
+    height: 120px;
+    width: 161px;
+    padding: 16px 8px;
+    text-align: center;
+    background-color: lightgray;
+}
+.choice {
+    margin: 4px;
+    background-color: #EFEFEF;
+}

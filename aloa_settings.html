@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA MK course</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>ALOA Master Keying</b></h3></p>Spring 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        Your display name is  
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
+        var main = document.getElementById("upper");
+        main.innerHTML += `${displayName}.<br><br>`
+        for (i=0;i<=20;i++) {
+            if (localStorage.getItem(`score${i}`)) {
+                main.innerHTML += localStorage.getItem(`score${i}`) + `<br>`
+            }
+        }
+        main.innerHTML += `<br><br>This information is stored in your local browser, <em>not on our server</em>.
+        When you take a quiz and click "submit", your display name, and your score for that quiz, will be emailed to your instructor.
+        You may wish to provide a return email address at that time, but it is not required. If you do provide your email address,
+        it will not be kept on our server. <em>However</em>, we use <strong>airform.io</strong> to submit your scores via email, and
+        we have no control over whether airform may or may not make a record your email address and your display name.<br><br>
+        For you to get credit for taking the quizzes, you should select a display name that makes it easy for us to identify you.
+        For example, you could use your first name plus your ALOA membership number. You can enter a name below, or you can
+        have the computer select a random Guest number for you. You can also reset all your local data, which means your browser
+        will completely forget about which quizzes you have taken and what scores you earned, but you'll keep your display name.<br><br>
+        If you prefer not to use airform, you may take a screenshot of your quiz scores and email it to us, using
+        whatever email program you like.<br>
+        <br>your name: <input type="text" id="userName" value=${displayName}><button onclick="changeName()">Enter</button><br>
+        <br><button id="random" onclick="randomName()">Random name</button><br>
+        <br><button id="reset" onclick="reset()">Reset scores</button><br>
+        <br><br><button onclick="location.href='aloa_main.html'">Return to main page</button>`;
+        function changeName() {
+            displayName = document.getElementById("userName").value;
+            localStorage.setItem(`userName`,displayName);
+            location.reload()
+        };
+        function randomName() {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName);
+            location.reload() 
+        };
+        function reset() {
+            localStorage.clear();
+            localStorage.setItem(`userName`,displayName);
+            location.reload() 
+        }
+    </script>
+    <script src=""></script>
+</body>
+</html>

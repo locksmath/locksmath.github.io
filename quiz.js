@@ -30,14 +30,16 @@ function askQuestion() {
         finalScore = Math.round(100 * points / possible);
         tally += `  ${points}/${possible} = ${finalScore}%`;
         main.innerHTML = `<h3>Finished!</h3><br>${tally}<br>`;
+        localStorage.setItem(`score${classNumber}`,tally);
+        console.log(`score${classNumber} `+tally);
         if (finalScore == 100) {
-            main.innerHTML += `Congratulations! You get a gold star!<img src="smallgoldstar.png"; height= 42px><br>`;
+            main.innerHTML += `Congratulations! You get a gold star!<img src="goldstar.png"; height= 42px><br>`;
             main.innerHTML += '<br><br><button onclick="submit()">Submit your score</button>';
-            localStorage.setItem(`prog${classNumber}`, 3 )
+            localStorage.setItem(`prog${classNumber+2}`, 3 )
         } else if (finalScore >= 70) {
             main.innerHTML += `Congratulations, you passed.`;
             main.innerHTML += '<br><br><button onclick="submit()">Submit your score</button>';
-            localStorage.setItem(`prog${classNumber}`, 3 )
+            localStorage.setItem(`prog${classNumber+2}`, 2 )
         } else {
             main.innerHTML += `Passing score is 70%. Please try again.`
         }
@@ -67,6 +69,7 @@ function askQuestion() {
             main.innerHTML += `<button id="b0" class="choice" onclick=
                     "toggle(0)">${quizItems[i].option[0]}</button><br>`;
         }
+        main.innerHTML += `<br><br>`;
     }
 }
 
@@ -90,7 +93,7 @@ function toggle(n) {
             scoreBoard.innerHTML = `<h3>Your score so far: ${points} out of ${possible}</h3>`;
             main.innerHTML += `<br>Incorrect.<br>`;
         }
-        main.innerHTML += `<button onclick="nextQuestion()">Next</button>`;
+        main.innerHTML += `<button onclick="nextQuestion()">Next</button><br><br>`;
         clicked = true; // Ignore subsequent clicks on this same question.
     }
 }
@@ -99,5 +102,5 @@ function nextQuestion() { i++; askQuestion() }
 function submit() {
     main.innerHTML += `<form action="https://airform.io/locksmath@outlook.com" method="post">
     <input type="text" name="name" placeholder="your email (optional)">
-    <textarea name="message" hidden>Quiz ${tally}</textarea><button>Send</button></form>`;
+    <textarea name="message" hidden>${localStorage.getItem("userName")} Quiz ${tally}</textarea><button>Send</button></form>`;
 }
