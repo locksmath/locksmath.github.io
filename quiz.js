@@ -5,13 +5,12 @@ var scoreBoard = document.getElementById('upper')
 var main = document.getElementById('lower');
 var i, points, possible, correct, quizItems, finalQuestion, tally;
 
-
 fetch(quizFileName)
     .then(x => x.json())
     .then(data => load(data));
 function load(questions) { quizItems = questions }
 
-main.innerHTML = `<br><br><button onclick="startQuiz()">Start quiz.</button>`
+main.innerHTML += `<br><br><button onclick="startQuiz()">Start quiz</button>`
 
 function startQuiz() {
 
@@ -28,10 +27,23 @@ function startQuiz() {
 function askQuestion() {
     if (i > finalQuestion) {
         scoreBoard.innerHTML = `<h3>Your final score: ${points} out of ${possible}</h3>`;
-        tally += `  ${points}/${possible} = ${Math.round(100 * points / possible)}%`;
-        main.innerHTML = `<h3>Finished!</h3><br>${tally}`;
-        main.innerHTML += '<br><br><button onclick="startQuiz()">Try again?</button>';
-        main.innerHTML += '<br><br><button onclick="submit()">Submit your score.</button>';
+        finalScore = Math.round(100 * points / possible);
+        tally += `  ${points}/${possible} = ${finalScore}%`;
+        main.innerHTML = `<h3>Finished!</h3><br>${tally}<br>`;
+        if (finalScore == 100) {
+            main.innerHTML += `Congratulations! You get a gold star!<img src="smallgoldstar.png"; height= 42px><br>`;
+            main.innerHTML += '<br><br><button onclick="submit()">Submit your score</button>';
+            localStorage.setItem(`prog${classNumber}`, 3 )
+        } else if (finalScore >= 70) {
+            main.innerHTML += `Congratulations, you passed.`;
+            main.innerHTML += '<br><br><button onclick="submit()">Submit your score</button>';
+            localStorage.setItem(`prog${classNumber}`, 3 )
+        } else {
+            main.innerHTML += `Passing score is 70%. Please try again.`
+        }
+        main.innerHTML += `<br><br><button onclick="startQuiz()">Take the quiz again</button>`;
+        main.innerHTML += `<br><br><button onclick="location.href='class${classNumber}.html'">Return to Lesson ${classNumber}</button>`;    
+        main.innerHTML += `<br><br><button onclick="location.href='aloa_main.html'">Return to main page</button>`;    
     }
     else {
         main.innerHTML = `<h3>Question #${i}</h3>`;
@@ -86,6 +98,6 @@ function toggle(n) {
 function nextQuestion() { i++; askQuestion() }
 function submit() {
     main.innerHTML += `<form action="https://airform.io/locksmath@outlook.com" method="post">
-    <input type="text" name="name" placeholder="Enter your name">
+    <input type="text" name="name" placeholder="your email (optional)">
     <textarea name="message" hidden>Quiz ${tally}</textarea><button>Send</button></form>`;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW1</title>
+    <title>ALOA MK course, Lesson 1</title>
 </head>
 <style>
     #navbar {
@@ -13,7 +13,7 @@
         justify-content: space-around;
         height: 64px;
         width: 720px;
-        background-color: #eecefd;
+        background-color: #EECEFD;
     }
     .choice {
         margin: 4px;
@@ -26,24 +26,30 @@
         <a href="main.html"><img src="schematic3.png"; height= 42px></a>
         <div style="text-align: center; margin-top: -18px; line-height: 10%;">
         <h3><b>Master Keying Fundamentals</b></h3></p>Spring 2021</b></div>
-        <div>you are signed in as:<br>Guest314159</div>
+        <div id="signedIn"></div>
     </div>
-    <div id="upper" style="padding: 8px 8px; background-color: #BFFFBF; width: 704px;">
+    <div id="upper" style="padding: 8px 8px; background-color: #CFFFCF; width: 704px;">
         There are some important things that all locksmiths should know about Master Keying. In this lesson, we
         cover the mechanics of split pin master keying, what can go wrong, incidental master keys, different methods
         of master keying, construction master keying, multiplex keyways, and more. You will also learn the Eight
         Rules of Master Keying which will help keep you and your employees out of trouble.<br>
         <br>
         <a href="main.html"><img src="correct3.gif"; height= 150px></a>
-        <br>
-        The quiz is multiple choice. When you click on your answer, it will immediately turn green if you chose
-        correctly, or red if you chose incorrectly. At the end, you will have the option to either submit your score,
-        or start over. There is no limit to how many times you can start over. The score resets each time. When you
-        are ready, click "Start quiz."
     </div>
     <div id="lower" style="padding: 8px 8px; background-color: lightgoldenrodyellow; width: 704px;">
+        The quiz is multiple choice. When you click on your answer, it will immediately turn green (if you chose
+        correctly), or red (if you chose incorrectly). At the end, you will get a score, and have the
+        option to take the quiz again. There is no limit to how many times you can take the quiz. The score
+        resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
+        to the instructor. If your score is 100%, you get a gold star. When you are ready, click "Start quiz."
     </div>
     <script>
+        login = document.getElementById("signedIn");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_login.html'">Change name</button>`;
         var classNumber = 1;
         var quizFileName = "class1.json";
     </script>

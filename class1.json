@@ -23,7 +23,7 @@
 { "question": "In a typical pin-tumbler lock, the part where the key turns is called what?",
   "howMany" : 4, "option": ["","the cylinder", "the chamber", "the barrel", "the latch"],
   "isOther" : false } ,
-{ "question": "In a typical pin-tumbler lock, the holes in which the pins move up and down is called what?",
+{ "question": "In a typical pin-tumbler lock, the holes in which the pins move up and down are called what?",
   "howMany" : 3, "option": ["none of the above","the chambers", "the cylinders", "the barrels"],
   "isOther" : false } ,
 { "question": "You find a six-chamber lock whose sixth chamber is empty, operated by a five-pin key. This is probably acceptable, unless what?",

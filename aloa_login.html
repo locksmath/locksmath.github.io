@@ -15,29 +15,6 @@
         width: 720px;
         background-color: #eecefd;
     }
-    .grid-container {
-        margin: 4px 0px;
-        width: 720px;
-        display: grid;
-        grid-gap: 4px;
-        grid-template-areas:
-            'main main main main'
-            'main main main main';    
-    }
-    .click {
-        text-decoration: none;
-    }
-    .block {
-        height: 120px;
-        width: 161px;
-        padding: 16px 8px;
-        text-align: center;
-        background-color: lightgray;
-    }
-    .choice {
-        margin: 4px;
-        background-color: #EFEFEF;
-    }
 </style>
 <body>
     <div id="navbar">
@@ -46,15 +23,17 @@
         <h3><b>ALOA Master Keying</b></h3></p>Spring 2021</b></div>
         <div id="signedIn"></div>
     </div>
-    <div id="lessons" class="grid-container">
+    <div id="upper">
+        Your name is  
     </div>
     <script>
-        login = document.getElementById("signedIn");
+        var login = document.getElementById("signedIn");
+        var displayName = "Guest"+Math.floor(Math.random()*999999);
         if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
-        else {
-            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
-            localStorage.setItem(`userName`,displayName)}; 
-        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_login.html'">Change name</button>`
+        else {localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `<button onclick="location.href='aloa_login.html'">Welcome<br>${displayName}</button>`
+        var main = document.getElementById("upper");
+        main.innerHTML += `${displayName}.<br>You may choose a different name, or get a new random guest number.`;
     </script>
     <script src="aloa_main.js"></script>
 </body>

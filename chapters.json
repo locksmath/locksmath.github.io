@@ -1,10 +1,4 @@
-// localStorage.clear();
-localStorage.setItem("prog3",3);
-localStorage.setItem("prog4",2);
-localStorage.setItem("prog5",3);
-localStorage.setItem("prog6",2);
-localStorage.setItem("prog7",1);
-var TOC = [ {} , {
+[ {} , {
     "fileName" : "welcome.html", "active" : true, "title" : "Introduction",
         "description" : "What to expect<br>from this class" } , {
     "fileName" : "class0.html", "active" : true, "title" : "Prerequisites",
@@ -43,35 +37,6 @@ var TOC = [ {} , {
         "description" : "Common Mistakes<br>in Master Keying" } , {
     "fileName" : "review.html", "active" : false, "title" : "Review",
         "description" : "Preparing for<br>The Final Exam" } , {
-    "fileName" : "cert.html", "active" : false, "title" : "Final",
-        "description" : "Requirements for<br>Designation" } ];
-var main = document.getElementById("lessons");
-
-for (i=1;i<=20;i++) {
-    if (!(localStorage.getItem(`prog${i}`))) {
-        if (TOC[i].active) {status = 1}
-            else {status = 0}
-        localStorage.setItem(`prog${i}`,status)
-    } else {status = localStorage.getItem(`prog${i}`)};
-    if (status > 0) {link = TOC[i].fileName} else {link = ""};
-    main.innerHTML += `<a href="${link}" class="click"><div id="block${i}" class="block"></div></a>`;
-    gridSquare = document.getElementById(`block${i}`);
-    gridSquare.innerHTML = `<h2>${TOC[i].title}</h2>${TOC[i].description}`;
-    if (status == 0) { // not available
-        gridSquare.style.backgroundColor = "#DFDFAF";
-        gridSquare.style.color = "gray";
-    }
-    if (status == 1) { // available
-        gridSquare.style.backgroundColor = "lightblue";
-        gridSquare.style.color = "blue";
-    }
-    if (status >= 2) { // passed
-        gridSquare.style.backgroundColor = "lightgreen";
-        if (status == 3) { // 100% gold star
-            gridSquare.style.backgroundImage = "url(goldstar.png)";
-            gridSquare.style.backgroundSize = "34px 34px";
-            gridSquare.style.backgroundPosition = "95% 5%";
-            gridSquare.style.backgroundRepeat = "no-repeat";            
-        }        
-    }
-}
+    "fileName" : "cert.html", "active" : false, "title" : "Certificate",
+        "description" : "Requirements for<br>Certification" } 
+]

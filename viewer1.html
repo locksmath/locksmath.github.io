@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Help</title>
+</head>
+<style>
+    body {
+        font-family: Tahoma, Verdana, sans-serif;
+        background-color: #CFF7CF;
+    }
+    #screen {
+        border: 2px solid black;
+        height: 450px;
+        width: 800px;
+        background-color: darkgray;
+    }
+    #notes {
+        padding: 8px 20px;
+        width: 764px;
+        font-family: inherit;
+        font-size: 18px;
+        background-color: white;
+    }
+    button {
+        margin: 4px 120px;
+        padding: 4px 20px;
+        font-family: inherit;
+        font-size: 18px;
+    }
+</style>
+<body>
+    <div id="screen"></div>
+    <div id="notes"></div>
+    <button id="prev" onclick="showSlide(-1)">< Prev Slide</button>
+    <button id="next" onclick="showSlide(+1)">Next Slide ></button>
+    <script>
+        const presFileName = "pres0.json";
+        var currentSlide = "correct3.gif"; // title screen
+        const finalSlide = 27;
+
+        var screen = document.getElementById("screen");
+        var notes = document.getElementById("notes");
+        var presentation;
+        fetch(presFileName)
+            .then(x => x.json())
+            .then(data => load(data));
+        function load(slides) { presentation = slides }
+        var i = 0; // title screen is slide zero
+        screen.innerHTML = `<img src="${currentSlide}">`;
+        notes.innerHTML = `When you're ready, click "Next Slide".`;
+        
+        function showSlide(offset) {
+            if (i+offset>0 && i+offset<=finalSlide) {
+                i += offset;
+                screen.style.backgroundImage = `url(${currentSlide})`;
+                // moves current slide to backgroung
+                // if (i<10) { slide = `pinlock/pinlock0${i}.png`}
+                // else { slide = `pinlock/pinlock${i}.png` }
+                // console.log(slide);
+                currentSlide = presentation[i].image;
+                screen.innerHTML = `<img src="${slide}">`;
+                notes.innerHTML = presentation[i].notes;
+            }
+        }
+    </script>
+</body>
+</html>
