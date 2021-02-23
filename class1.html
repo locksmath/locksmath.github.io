@@ -10,7 +10,7 @@
 </style>
 <body>
     <div id="navbar" class="banner">
-        <a href="main.html"><img src="schematic3.png"; height= 42px></a>
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
         <div style="text-align: center; margin-top: -18px; line-height: 10%;">
         <h3><b>Master Keying Fundamentals</b></h3></p>Spring 2021</b></div>
         <div id="settings"></div>
@@ -21,10 +21,11 @@
         of master keying, construction master keying, multiplex keyways, and more. You will also learn the Eight
         Rules of Master Keying which will help keep you and your employees out of trouble.<br>
         <br>
-        Click below if you want to watch a presentation which covers Master Keying Fundamentals. If you have already
+        Click below if you want to view a presentation which covers Master Keying Fundamentals. If you have already
         attended the Master Keying Fundamentals webinar, you may not need to view the presentation; it's basically
         the same topics. You could skip down to the quiz.<br>
-        <a href="pres1.html"><img src="correct3.gif"; height= 150px></a>
+        <!-- <a href="pres1.html"><img src="correct3.gif"; height= 150px></a> -->
+        <a href="powerpoint01-fundamentals.pdf">powerpoint01-fundamentals.pdf</a>
     </div>
     <div id="lower">
         The quiz is multiple choice. When you click on your answer, it will immediately turn green (if you chose
@@ -32,6 +33,8 @@
         option to take the quiz again. There is no limit to how many times you can take the quiz. The score
         resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
         to the instructor. If your score is 100%, you get a gold star. When you are ready, click "Start quiz."
+        <br><br><button onclick="startQuiz()">Start quiz</button>
+        <br><br><button onclick="showPart2()">Show Homework part 2</button>
     </div>
     <div id="footer" class="banner">
         <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
@@ -46,6 +49,26 @@
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
         var classNumber = 1;
         var quizFileName = "quiz1.json";
+        var part2 = `<h3>Homework part two:</h3>
+        <strong>For questions 1-7, assume a two-level master key system.</strong><br>
+        1. List all the keys that would operate the 1AA lock.<br>
+        2. List all the keys that would operate the 5AA lock.<br>
+        3. List all the keys that would operate the 5AA(NMK) lock.<br>
+        4. List all the keys that would operate the 3BB lock.<br>
+        5. List all the keys that would operate the 4ZZ lock.<br>
+        6. List all the keys that would operate the AA lock.<br>
+        7. List all the keys that would operate the SDK1 lock.<br><br>
+        <strong>For questions 8-14, assume a three-level master key system.</strong><br>
+        8. List all the keys that would operate the AA1 lock.<br>
+        9. List all the keys that would operate the AA5 lock.<br>
+        10. List all the keys that would operate the AA5(NMK) lock.<br>
+        11. List all the keys that would operate the BB3 lock.<br>
+        12. List all the keys that would operate the B6 lock.<br>
+        13. List all the keys that would operate the AA lock.<br>
+        14. List all the keys that would operate the SKD1 lock.<br><br>
+        <strong>Email your answers to aloamkhomework@protonmail.com .</strong><br><br>
+        <button onclick="location.href='class${classNumber}.html'">Go back</button>`;
+        function showPart2() {main.innerHTML = part2}
     </script>
     <script src="quiz.js"></script>
 </body>

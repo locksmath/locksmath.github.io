@@ -10,8 +10,6 @@ fetch(quizFileName)
     .then(data => load(data));
 function load(questions) { quizItems = questions }
 
-main.innerHTML += `<br><br><button onclick="startQuiz()">Start quiz</button>`
-
 function startQuiz() {
 
     points = 0;
@@ -100,7 +98,7 @@ function toggle(n) {
 
 function nextQuestion() { i++; askQuestion() }
 function submit() {
-    main.innerHTML += `<form action="https://airform.io/locksmath@outlook.com" method="post">
+    main.innerHTML += `<form action="https://airform.io/aloamkhomework@protonmail.com" method="post">
     <input type="text" name="name" placeholder="your email (optional)">
     <textarea name="message" hidden>${localStorage.getItem("userName")} Quiz ${tally}</textarea><button>Send</button></form>`;
 }
