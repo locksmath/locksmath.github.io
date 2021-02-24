@@ -98,6 +98,24 @@ function toggle(n) {
 
 function nextQuestion() { i++; askQuestion() }
 function submit() {
+/*<form action="https://liveformhq.com/form/0c3f090f-bd7a-4efc-8a98-99cf77ea3f14" method="POST" accept-charset="utf-8">
+  <input type="hidden" name="_utf8" value="✓">
+
+  <!--
+    NOTE: This is an optional field, if your form has a field named '_redirect',
+    The user will be redirected to this page after the submission is saved
+  -->
+  <input type="hidden" value="https://liveformhq.com/thank_you" name="_redirect" />
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name"> <br />
+
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email"> <br />
+
+  <button type="submit">Submit</button>
+</form>
+*/    
     main.innerHTML += `<form action="https://airform.io/locksmath@outlook.com" method="post">
     <input type="text" name="name" placeholder="your email (optional)">
     <textarea name="message" hidden>${localStorage.getItem("userName")} Quiz ${tally}</textarea><button>Send</button></form>`;
