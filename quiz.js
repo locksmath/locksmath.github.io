@@ -10,6 +10,19 @@ fetch(quizFileName)
     .then(data => load(data));
 function load(questions) { quizItems = questions }
 
+if (localStorage.getItem(`prog${classNumber+2}`) == 1) { // available
+    main.innerHTML += `When you are ready`
+} else {
+    main.innerHTML += `<br><br>You have already taken this quiz.<br>`;
+    main.innerHTML += localStorage.getItem(`score${classNumber}`);
+    if (localStorage.getItem(`prog${classNumber+2}`) == 3) {main.innerHTML += ` <img src="goldstar.png"; height= 12px> `};
+    if (localStorage.getItem(`sent${classNumber}`)) {main.innerHTML += ` <img src="envelope.png"; height= 12px> submitted`};
+    main.innerHTML += `<br><br>If you want to take it again`
+};
+main.innerHTML += `, click "Start quiz."<br><br><button onclick="startQuiz()">
+Start quiz</button><br><br><button onclick="showPart2()">Show Homework part 2</button>`
+
+
 function startQuiz() {
 
     points = 0;
@@ -18,34 +31,14 @@ function startQuiz() {
     tally = `Quiz${classNumber} results: `;
     scoreBoard.innerHTML = `<h3>Your score so far: ${points} out of ${possible}</h3>`;
     finalQuestion = quizItems.length - 1 // Question zero is null.
+
     i = 1; // Ready for first question.
     askQuestion();
 }
 
 function askQuestion() {
-    if (i > finalQuestion) {
-        scoreBoard.innerHTML = `<h3>Your final score: ${points} out of ${possible}</h3>`;
-        finalScore = Math.round(100 * points / possible);
-        tally += `  ${points}/${possible} = ${finalScore}%`;
-        main.innerHTML = `<h3>Finished!</h3><br>${tally}<br>`;
-        localStorage.setItem(`score${classNumber}`,tally);
-        console.log(`score${classNumber} `+tally);
-        if (finalScore == 100) {
-            main.innerHTML += `Congratulations! You get a gold star!<img src="goldstar.png"; height= 42px><br>`;
-            main.innerHTML += '<br><br><button onclick="submit()">Submit your score</button>';
-            localStorage.setItem(`prog${classNumber+2}`, 3 )
-        } else if (finalScore >= 70) {
-            main.innerHTML += `Congratulations, you passed.`;
-            main.innerHTML += '<br><br><button onclick="submit()">Submit your score</button>';
-            localStorage.setItem(`prog${classNumber+2}`, 2 )
-        } else {
-            main.innerHTML += `Passing score is 70%. Please try again.`
-        }
-        main.innerHTML += `<br><br><button onclick="startQuiz()">Take the quiz again</button>`;
-        main.innerHTML += `<br><br><button onclick="location.href='class${classNumber}.html'">Return to Lesson ${classNumber}</button>`;    
-        main.innerHTML += `<br><br><button onclick="location.href='aloa_main.html'">Return to main page</button>`;    
-    }
-    else {
+    if (i > finalQuestion) { endOfQuiz() 
+    } else {
         main.innerHTML = `<h3>Question #${i}</h3>`;
         main.innerHTML += quizItems[i].question + "<br>";
         // random order, except option[0] always goes last (if it exists).
@@ -97,26 +90,36 @@ function toggle(n) {
 }
 
 function nextQuestion() { i++; askQuestion() }
-function submit() {
-/*<form action="https://liveformhq.com/form/0c3f090f-bd7a-4efc-8a98-99cf77ea3f14" method="POST" accept-charset="utf-8">
-  <input type="hidden" name="_utf8" value="✓">
 
-  <!--
-    NOTE: This is an optional field, if your form has a field named '_redirect',
-    The user will be redirected to this page after the submission is saved
-  -->
-  <input type="hidden" value="https://liveformhq.com/thank_you" name="_redirect" />
+function endOfQuiz() {
+    scoreBoard.innerHTML = `<h3>Your final score: ${points} out of ${possible}</h3>`;
+    finalScore = Math.round(100 * points / possible);
+    tally += `  ${points}/${possible} = ${finalScore}%`;
+    main.innerHTML = `<h3>Finished!</h3><br>${tally}<br>`;
+    localStorage.setItem(`score${classNumber}`,tally);
+    console.log(`score${classNumber} `+tally);
+    if (finalScore >= 70) { // pass
+        main.innerHTML += `Congratulations, you passed.`;
+        localStorage.setItem(`prog${classNumber+2}`, 2 );
+        if (finalScore == 100) { // perfect
+            main.innerHTML += ` And, you get a gold star!<img src="goldstar.png"; height= 42px>`;
+            localStorage.setItem(`prog${classNumber+2}`, 3 )
+        };
+        localStorage.removeItem(`sent${classNumber}`);
+        main.innerHTML += `<br>Click here to submit your score:
+        <form action="https://liveformhq.com/form/0c3f090f-bd7a-4efc-8a98-99cf77ea3f14" method="POST" accept-charset="utf-8">
+        <input type="hidden" name="_utf8" value="✓">
+        <input type="hidden" value="https://locksmath.github.io/class${classNumber}.html" name="_redirect" />
+        <input type="hidden" id="name" name="name" value="${localStorage.getItem("userName")}" />
+        <input type="hidden" id="message" name="message" value="${tally}" />
+        <button type="submit" onclick="submitted()">Submit</button></form>`;
+    } else { // <70 fail
+        main.innerHTML += `Passing score is 70%. Please try again.`
+    }
+    main.innerHTML += `<br><br><button onclick="startQuiz()">Take the quiz again</button>`;
+    main.innerHTML += `<br><br><button onclick="location.href='class${classNumber}.html'">Return to Lesson ${classNumber}</button>`;    
+    main.innerHTML += `<br><br><button onclick="location.href='aloa_main.html'">Return to main page</button>`;    
 
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name"> <br />
-
-  <label for="email">Email</label>
-  <input type="text" id="email" name="email"> <br />
-
-  <button type="submit">Submit</button>
-</form>
-*/    
-    main.innerHTML += `<form action="https://airform.io/locksmath@outlook.com" method="post">
-    <input type="text" name="name" placeholder="your email (optional)">
-    <textarea name="message" hidden>${localStorage.getItem("userName")} Quiz ${tally}</textarea><button>Send</button></form>`;
 }
+
+function submitted() {localStorage.setItem(`sent${classNumber}`,"yes")}
