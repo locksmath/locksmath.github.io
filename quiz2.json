@@ -29,6 +29,6 @@
     "when additional key control and resistance to bumping is required"],
   "isOther" : false } ,
 { "question": "In a three-level system, which of the follow keys would <strong><em>not</em></strong> operate the A2R13 lock?",
-  "howMany" : 4, "option": ["All of them would operate A2R13.","A", "A2", "A2R", "A2R13"],
+  "howMany" : 4, "option": ["All of them would operate A2R13.","A2", "A", "A2R", "A2R13"],
   "isOther" : false }
 ]
