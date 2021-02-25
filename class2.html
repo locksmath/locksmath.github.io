@@ -45,20 +45,37 @@
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
         var classNumber = 2;
         var quizFileName = "quiz2.json";
-        var part2 = `<h2>Homework part two:</h2>
-        <h3>Crossfields Chiropractic</h3>
-        Plan a two-level master key system for this Medical office. 
-        Start with the floor plan. Draw a key schematic. Write a keying schedule (lock detail optional).
-        <h3>Shearson Towers</h3>
-        Plan a three-level master key system for this building.
-        Start with a plan for how keys will be used.
-        Document the plan with a key schematic.
-        Create a keying schedule for one floor (lock detail optional)
-        Prepare a cover page, keying submittal or consultant comments to the architect.
-        <strong>Treat these fictional examples as confidential, just as you would for a real customer. Send your
+        function showPart2() {main.innerHTML = `<h2>Homework part two:</h2>
+        <h3>System 1:
+        <a href="crossfields.pdf"><img src="crossfields.jpg" style="float:right; height:180px"></a></h3>
+        <strong>Crossfields Chiropractic</strong>
+        <ul><li>Doormark plan</li>
+            <li>2-level key schematic</li>
+            <li>Keying schedule (lock detail optional)</li>
+        </ul>
+        <em>Click the diagram to download it as a pdf, or right-click<br>
+        and select "Save image as..." to download it as a jpg.</em><br><br>
+        <h3>System 2:</h3>
+        <strong>Shearson Towers</strong>
+        <a href="shearson.pdf"><img src="shearson.jpg" style="float:right; width:300px"></a>
+        <ul><li>Cover page: Submittal, or Comments to the Architect</li>
+            <li>Doormark plan</li>
+            <li>3-level key schematic</li>
+            <li>Keying schedule (lock detail optional)</li>
+        </ul>
+        <em>Click the diagram to download it as a pdf, or right-click<br>
+        and select "Save image as..." to download it as a jpg.</em><br><br>
+        <h3>System 3:</h3>A single-page key schematic for a 3-level system with:
+        <ul>
+            <li>3 master keys under the grand master</li>
+            <li>an independent master key system</li>
+            <li>change keys under each master</li>
+            <li>change keys directly under the grand master</li>
+            <li>at least one SKD key</li>
+        </ul>
+        <br><strong>Treat these fictional examples as confidential, just as you would for a real customer. Send your
         answers with ProtonMail (which uses end-to-end encryption) to aloamkhomework@protonmail.com .</strong><br><br>
-        <button onclick="location.href='class${classNumber}.html'">Go back</button>`;
-        function showPart2() {main.innerHTML = part2}
+        <button onclick="location.href='class${classNumber}.html'">Go back</button>`}
     </script>
     <script src="quiz.js"></script>
 </body>

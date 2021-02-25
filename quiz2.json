@@ -28,7 +28,7 @@
     "when the customer can afford a third level", "when the expansion is unknown and a third level may be required later", 
     "when additional key control and resistance to bumping is required"],
   "isOther" : false } ,
-{ "question": "What keys would operate a lock whose key symbol is A2R13 (in a three-level system)?",
-  "howMany" : 4, "option": ["There is no answer because A2R13 is not a valid key symbol.","A, A2R, and A2R13", "A, A2, and A2R13", "A, A2, A2R, and A2R13", "A, A2, A2R, and A2R13"],
+{ "question": "In a three-level system, which of the follow keys would <strong><em>not</em></strong> operate the A2R13 lock?",
+  "howMany" : 4, "option": ["All of them would operate A2R13.","A", "A2", "A2R", "A2R13"],
   "isOther" : false }
 ]

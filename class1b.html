@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA MK course, Lesson 1</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Master Keying Fundamentals</b></h3></p>Spring 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        <p>Simply put, Master Keying is the art of making two different keys operate the same lock. Typically, one
+        is the <strong>change key</strong> and the other is the <strong>master key</strong>. We say the lock is
+        <strong>master keyed</strong>. Alternatively, locks which are intended to operate with just one key are
+        called <strong>single keyed</strong>, abbreviated <strong>SKD</strong>. In rare cases, you might want to
+        make more than one change key operate the same lock, which is called <strong>cross keying</strong>. An
+        extreme example of this is <strong>maison keying</strong>, where the goal is to make the lock operate with
+        every change key from the entire building. (The word <em>maison</em> in French means <em>house</em>.)
+        Locksmiths sometimes get confused by the term “cross keying”, thinking it means a mistake. That's not the
+        case. Cross keying is something you do on purpose. When it happens accidentally, that's called <strong>key
+        interchange</strong>.</p>
+        <p>The most common method for master keying pin-tumbler locks is called <strong>split pin master keying</strong>,
+        which involves putting an extra pin (called a <strong>master pin</strong>) between the bottom pin and driver
+        pin. In rare cases, master pins may be stacked on top of each other, or the chamber might be left empty.
+        Putting master pins in more than one chamber almost always enables additional <strong>incidental</strong> keys
+        to operate. We often take advantage of this to create <strong>incidental master keys</strong> in a <strong>
+        three-level</strong> master key system (change key, master key, <strong>grand master key</strong>). A lock
+        which is pinned to the change key and the grand master key will automatically operate with the incidental
+        master key. Incidental keys work because every cut on the key is identical to a corresponding cut on one of
+        the operating keys for that lock. For example, suppose the grand master key A is <code>345612</code> and the
+        change key AB6 is <code>363452</code>. Notice that both keys start with a <code>3</code> and end with a
+        <code>2</code>. Positions like that, where the change key is identical to the top master key, are called
+        <strong>constants</strong>. Constants are good. Constants are your friends. Now, consider a key cut to 
+        <code>345452</code>. The first half of the key is identical to the grand master key and the second half is
+        identical to the change key. Such a key would operate the lock, whether we want it to or not. We can take
+        advantage of this and use <code>345452</code> as the AB incidental master key. Unfortunately, the existence
+        of incidental keys greatly increases the chances for key interchange, which is why
+        <a href="https://webstore.ansi.org/Standards/BHMA/ANSIBHMAA156282018">ANSI/BHMA &nbsp; A156.28</a> (the
+        industry standard for master keying) specifies that locksmiths should minimize the incidental keys, <em>“by
+        using the fewest possible master pins per cylinder”</em>. In other words, use as many constants as possible,
+        to reduce the likelihood of key interchange.</p>
+        <p>There are essentially three types of key interchange. First, a random key from outside the master key
+        system might operate one of the locks because it is identical to one of the change keys, or a master key,
+        or one of the incidental keys. Second, a key from inside the system might operate a lock (where it wasn't
+        intended to) because it is identical to the change key for that lock, or a master key, or an incidental key.
+        Third, the lock might be manipulated by a key that wouldn't be expected to operate that lock but sometimes
+        turns anyway. Manipulation is often called “key picking”. Using a bump key is another example of manipulation.
+        Locks are generally not intended to operate with a key cut to <code>999999</code>, but (sometimes) it turns.
+        Key interchange by random outside keys, or by manipulation, is impossible to avoid entirely. But master
+        keying tends to make it worse and steps should be taken to minimize the risks. Key interchange by keys inside
+        the system is unacceptable and must be eliminated. A properly designed master key system should have no
+        internal key interchange.</p>
+    </div>
+    <div id="lower">
+        The quiz is multiple choice. When you click on your answer, it will immediately turn green (if you chose
+        correctly), or red (if you chose incorrectly). At the end, you will get a score, and have the
+        option to take the quiz again. There is no limit to how many times you can take the quiz. The score
+        resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
+        to the instructor. If your score is 100%, you get a gold star.
+    </div>
+    <div id="footer" class="banner">
+        <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
+        for website issues:  locksmath@outlook.com</strong>
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
+        var classNumber = 1;
+        var quizFileName = "quiz1.json";
+        function showPart2() { main.innerHTML = `<h3>Homework part two:</h3>
+        <strong>For questions 1-7, assume a two-level master key system.</strong><br>
+        1. List all the keys that would operate the 1AA lock.<br>
+        2. List all the keys that would operate the 5AA lock.<br>
+        3. List all the keys that would operate the 5AA(NMK) lock.<br>
+        4. List all the keys that would operate the 3BB lock.<br>
+        5. List all the keys that would operate the 4ZZ lock.<br>
+        6. List all the keys that would operate the AA lock.<br>
+        7. List all the keys that would operate the SKD1 lock.<br><br>
+        <strong>For questions 8-14, assume a three-level master key system.</strong><br>
+        8. List all the keys that would operate the AA1 lock.<br>
+        9. List all the keys that would operate the AA5 lock.<br>
+        10. List all the keys that would operate the AA5(NMK) lock.<br>
+        11. List all the keys that would operate the BB3 lock.<br>
+        12. List all the keys that would operate the B6 lock.<br>
+        13. List all the keys that would operate the AA lock.<br>
+        14. List all the keys that would operate the SKD1 lock.<br><br>
+        <strong>Email your answers to aloamkhomework@protonmail.com .</strong><br><br>
+        <button onclick="location.href='class${classNumber}.html'">Go back</button>` }
+    </script>
+    <script src="quiz.js"></script>
+</body>
+</html>

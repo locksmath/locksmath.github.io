@@ -40,3 +40,8 @@
     margin: 4px;
     background-color: #EFEFEF;
 }
+code {
+    font-family: Bahnschrift, Consolas, "courier new", monospace;
+    padding: 1px;
+    font-size: 100%;
+  }
