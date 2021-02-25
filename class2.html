@@ -16,16 +16,14 @@
         <div id="settings"></div>
     </div>
     <div id="upper">
-        There are some important things that all locksmiths should know about Master Keying. In this lesson, we
-        cover the mechanics of split pin master keying, what can go wrong, incidental master keys, different methods
-        of master keying, construction master keying, multiplex keyways, and more. You will also learn the Eight
-        Rules of Master Keying which will help keep you and your employees out of trouble.<br>
-        <br>
-        Click below if you want to view a presentation which covers Master Keying Fundamentals. If you have already
+        <p>Master Keying Schematics and Keying Schedules, described in ANSI A156.28, are the foundation of good record
+        keeping and communication in master keying. Learn how to draw schematics using a computer or with paper and
+        pen, and how to use keying schedules to create records and submittal documents.</p>
+        <p></p>Click below if you want to view a presentation which covers Master Keying Fundamentals. If you have already
         attended the Master Keying Fundamentals webinar, you may not need to view the presentation; it's basically
-        the same topics. You could skip down to the quiz.<br>
+        the same topics. You could skip down to the quiz.</p>
         <!-- <a href="pres1.html"><img src="correct3.gif"; height= 150px></a> -->
-        <a href="powerpoint01-fundamentals.pdf">powerpoint01-fundamentals.pdf</a>
+        <a href="powerpoint02-schedules_and_schematics.pdf">powerpoint02-schedules_and_schematics.pdf</a>
     </div>
     <div id="lower">
         The quiz is multiple choice. When you click on your answer, it will immediately turn green (if you chose
@@ -45,26 +43,20 @@
             var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
             localStorage.setItem(`userName`,displayName)}; 
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
-        var classNumber = 1;
-        var quizFileName = "quiz1.json";
-        var part2 = `<h3>Homework part two:</h3>
-        <strong>For questions 1-7, assume a two-level master key system.</strong><br>
-        1. List all the keys that would operate the 1AA lock.<br>
-        2. List all the keys that would operate the 5AA lock.<br>
-        3. List all the keys that would operate the 5AA(NMK) lock.<br>
-        4. List all the keys that would operate the 3BB lock.<br>
-        5. List all the keys that would operate the 4ZZ lock.<br>
-        6. List all the keys that would operate the AA lock.<br>
-        7. List all the keys that would operate the SKD1 lock.<br><br>
-        <strong>For questions 8-14, assume a three-level master key system.</strong><br>
-        8. List all the keys that would operate the AA1 lock.<br>
-        9. List all the keys that would operate the AA5 lock.<br>
-        10. List all the keys that would operate the AA5(NMK) lock.<br>
-        11. List all the keys that would operate the BB3 lock.<br>
-        12. List all the keys that would operate the B6 lock.<br>
-        13. List all the keys that would operate the AA lock.<br>
-        14. List all the keys that would operate the SKD1 lock.<br><br>
-        <strong>Email your answers to aloamkhomework@protonmail.com .</strong><br><br>
+        var classNumber = 2;
+        var quizFileName = "quiz2.json";
+        var part2 = `<h2>Homework part two:</h2>
+        <h3>Crossfields Chiropractic</h3>
+        Plan a two-level master key system for this Medical office. 
+        Start with the floor plan. Draw a key schematic. Write a keying schedule (lock detail optional).
+        <h3>Shearson Towers</h3>
+        Plan a three-level master key system for this building.
+        Start with a plan for how keys will be used.
+        Document the plan with a key schematic.
+        Create a keying schedule for one floor (lock detail optional)
+        Prepare a cover page, keying submittal or consultant comments to the architect.
+        <strong>Treat these fictional examples as confidential, just as you would for a real customer. Send your
+        answers with ProtonMail (which uses end-to-end encryption) to aloamkhomework@protonmail.com .</strong><br><br>
         <button onclick="location.href='class${classNumber}.html'">Go back</button>`;
         function showPart2() {main.innerHTML = part2}
     </script>
