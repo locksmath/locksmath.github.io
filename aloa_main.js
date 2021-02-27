@@ -44,9 +44,10 @@ var main = document.getElementById("lessons");
 for (i=1;i<=20;i++) {
     if (!(localStorage.getItem(`prog${i}`))) {
         if (TOC[i].active) {status = 1}
-            else {status = 0}
+            else {status = 0};
         localStorage.setItem(`prog${i}`,status)
     } else {status = localStorage.getItem(`prog${i}`)};
+    if (TOC[i].active && (status<1)) {status = 1};
     if (status > 0) {link = TOC[i].fileName} else {link = ""};
     main.innerHTML += `<a href="${link}" class="click"><div id="block${i}" class="block"></div></a>`;
     gridSquare = document.getElementById(`block${i}`);
