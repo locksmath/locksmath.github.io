@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA MK course, Lesson 4</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Progressing multiple pages</b></h3></p>Spring 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        <p>Progression multiple pages</p>
+        
+    </div>
+    <div id="lower">
+        The quiz is multiple choice. When you click on your answer, it will immediately turn green (if you chose
+        correctly), or red (if you chose incorrectly). At the end, you will get a score, and have the
+        option to take the quiz again. There is no limit to how many times you can take the quiz. The score
+        resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
+        to the instructor. If your score is 100%, you get a gold star.
+    </div>
+    <div id="footer" class="banner">
+        <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
+        for website issues:  locksmath@outlook.com</strong>
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
+        var classNumber = 4;
+        var quizFileName = "quiz4.json";
+        function showPart2() { main.innerHTML = `<h3>Homework #4 part two:</h3>
+        <ol>
+        <li>Write a KBA with <code>315842</code> as the TMK, with one constant, using two-step progression. Choose for yourself where to put the constants. Choose your own sequence of progression.</li>
+        <li>Write a lead sheet showing all sixteen page masters. Leave room for incidental master keys, between the groups of four.</li>
+        <li>Find the incidental masters which cover each group of four pages; write them on your lead sheet.</li>
+        <li>Mark all the MACS violations.</li>
+        <li>On a second piece of paper, draw a key schematic for a three-level system with two master keys AA and AB under grand master A, with six change keys under each master.</li>
+        <li>Choose page masters for AA and AB. Write the key symbols AA and AB on the lead sheet, next to the bittings picked.</li>
+        <li>Fully progress the AA page. Write in the key symbols for AA1 to AA6.</li>
+        <li>Fully progress the AB page. Write in the key symbols for AB1 to AB6.</li>
+        <li>Choose a key bitting for SKD1 and SKD2.</li>
+        <li>Choose a key bitting for A1, a change key directly under the grand master.</li>
+        </ol>
+        <strong>Email your answers to aloamkhomework@protonmail.com , using ProtonMail for end-to-end encryption.</strong><br><br>
+        <button onclick="location.href='class${classNumber}.html'">Go back</button>` }
+    </script>
+    <script src="quiz.js"></script>
+</body>
+</html>
