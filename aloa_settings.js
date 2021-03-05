@@ -20,9 +20,11 @@ completely forget about which quizzes you have taken and what scores you earned,
 <p>If you prefer not to use liveformhq, you may take a screenshot of your quiz scores and email it to your instructor,
 using whatever email program you like.</p>
 your name: <input type="text" id="userName" value=${displayName}><button onclick="changeName()">Enter</button><br>
-<br><button id="random" onclick="randomName()">Random name</button><br>
-<br><button id="resubmit" onclick="resubmit()">Resubmit all scores</button><br>
-<br><button id="reset" onclick="reset()">Erase all scores</button><br>
+<br><button id="random" onclick="randomName()">Random name</button><br>`;
+if (localStorage.getItem('userName').substring(0,5) == "Guest") {
+    main.innerHTML +=`<br>You must change your display name before submitting scores.<br>`
+} else main.innerHTML += `<br><button id="resubmit" onclick="resubmit()">Resubmit all scores</button><br>`;
+main.innerHTML += `<br><button id="reset" onclick="reset()">Erase all scores</button><br>
 <br><br><button onclick="location.href='aloa_main.html'">Return to main page</button>`;
 function changeName() {
     displayName = document.getElementById("userName").value;
