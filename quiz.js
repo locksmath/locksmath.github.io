@@ -10,6 +10,11 @@ fetch(quizFileName)
     .then(data => load(data));
 function load(questions) { quizItems = questions }
 
+if (localStorage.getItem('userName').substring(0,5) == "Guest") {
+    main.innerHTML += `<br><br><code style="color: red">WARNING</code> Your display name is ${displayName}.
+    If you take the quiz with this name, you will not be able to submit your score. Please click the [settings]
+    button in the upper right corner to change your display name.`
+}
 if (localStorage.getItem(`prog${classNumber+2}`) == 1) { // available
     main.innerHTML += `When you are ready`
 } else {
@@ -106,13 +111,17 @@ function endOfQuiz() {
             localStorage.setItem(`prog${classNumber+2}`, 3 )
         };
         localStorage.removeItem(`sent${classNumber}`);
+        if (localStorage.getItem('userName').substring(0,5) == "Guest") {
+            main.innerHTML += `<br>You cannot submit your score as a guest. If you want to change your diplay name, click
+            [settings] in the upper right corner.`
+        } else {
         main.innerHTML += `<br>Click here to submit your score:
         <form action="https://liveformhq.com/form/0c3f090f-bd7a-4efc-8a98-99cf77ea3f14" method="POST" accept-charset="utf-8">
         <input type="hidden" name="_utf8" value="✓">
         <input type="hidden" value="https://locksmath.github.io/class${classNumber}.html" name="_redirect" />
         <input type="hidden" id="name" name="name" value="${localStorage.getItem("userName")}" />
         <input type="hidden" id="message" name="message" value="${tally}" />
-        <button type="submit" onclick="submitted()">Submit</button></form>`;
+        <button type="submit" onclick="submitted()">Submit</button></form>`};
     } else { // <70 fail
         main.innerHTML += `Passing score is 70%. Please try again.`
     }
