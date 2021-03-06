@@ -15,18 +15,20 @@ if (localStorage.getItem('userName').substring(0,5) == "Guest") {
     If you take the quiz with this name, you will not be able to submit your score. Please click the [settings]
     button in the upper right corner to change your display name.`
 }
-if (localStorage.getItem(`prog${classNumber+2}`) == 1) { // available
-    main.innerHTML += `When you are ready`
-} else {
-    main.innerHTML += `<br><br>You have already taken this quiz.<br>`;
-    main.innerHTML += localStorage.getItem(`score${classNumber}`);
-    if (localStorage.getItem(`prog${classNumber+2}`) == 3) {main.innerHTML += ` <img src="goldstar.png"; height= 12px> `};
-    if (localStorage.getItem(`sent${classNumber}`)) {main.innerHTML += ` <img src="envelope.png"; height= 12px> submitted`};
-    main.innerHTML += `<br><br>If you want to take it again`
+firstTime = true;
+if (localStorage.getItem(`score${classNumber}`)) {
+    lastScore = localStorage.getItem(`score${classNumber}`);
+    if (lastScore.length > 0) {
+        main.innerHTML += `<br><br>You have already taken this quiz.<br>`;
+        main.innerHTML += lastScore;
+        if (localStorage.getItem(`prog${classNumber+2}`) == 3) {main.innerHTML += ` <img src="goldstar.png"; height= 12px> `};
+        if (localStorage.getItem(`sent${classNumber}`)) {main.innerHTML += ` <img src="envelope.png"; height= 12px> submitted`};
+        main.innerHTML += `<br><br>If you want to take it again`;
+        firstTime = false
+    }
 };
-main.innerHTML += `, click "Start quiz."<br><br><button onclick="startQuiz()">
-Start quiz</button><br><br><button onclick="showPart2()">Show Homework part 2</button>`
-
+if (firstTime) {main.innerHTML += `When you are ready`};
+main.innerHTML += `, click "Start quiz."<br><br><button onclick="startQuiz()">Start quiz</button><br><br><button onclick="showPart2()">Show Homework part 2</button>`
 
 function startQuiz() {
 
