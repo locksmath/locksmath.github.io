@@ -13,7 +13,7 @@ var TOC = [ {} , {
         "description" : "Progressing<br>Multiple Pages" } , {
     "fileName" : "class5.html", "active" : true, "title" : "Lesson 5",
         "description" : "Cross Keying<br>without key interchange" } , {
-    "fileName" : "class6.html", "active" : false, "title" : "Lesson 6",
+    "fileName" : "class6.html", "active" : true, "title" : "Lesson 6",
         "description" : "Selective<br>Master keying" } , {
     "fileName" : "class7.html", "active" : false, "title" : "Lesson 7",
         "description" : "The Rotating<br>Constant Method" } , {
