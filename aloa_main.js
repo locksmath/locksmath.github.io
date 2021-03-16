@@ -15,7 +15,7 @@ var TOC = [ {} , {
         "description" : "Cross Keying<br>without key interchange" } , {
     "fileName" : "class6.html", "active" : true, "title" : "Lesson 6",
         "description" : "Selective<br>Master keying" } , {
-    "fileName" : "class7.html", "active" : false, "title" : "Lesson 7",
+    "fileName" : "class7.html", "active" : true, "title" : "Lesson 7",
         "description" : "The Rotating<br>Constant Method" } , {
     "fileName" : "class8.html", "active" : false, "title" : "Lesson 8",
         "description" : "Rotating Constant<br>Three Levels" } , {
