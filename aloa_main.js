@@ -17,7 +17,7 @@ var TOC = [ {} , {
         "description" : "Selective<br>Master keying" } , {
     "fileName" : "class7.html", "active" : true, "title" : "Lesson 7",
         "description" : "The Rotating<br>Constant Method" } , {
-    "fileName" : "class8.html", "active" : false, "title" : "Lesson 8",
+    "fileName" : "class8.html", "active" : true, "title" : "Lesson 8",
         "description" : "Rotating Constant<br>Three Levels" } , {
     "fileName" : "class9.html", "active" : false, "title" : "Lesson 9",
         "description" : "Designing<br>Master Key Systems" } , {
