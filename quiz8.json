@@ -20,7 +20,7 @@
 { "question": "Looking at this KBA:<br><code style='font-family: monospace;'>MMCCCC<br><u>345612</u><br>56.834<br>78.056<br>90.278<br><u>12.490</u><br>EDxCBA<br></code>Rotating the constant in the 'change' division of the key, how many ways can we rotate the constant?",
   "howMany" : 4, "option": ["", "4", "8", "16", "32"],
   "isOther" : false } ,
-{ "question": "Looking at this KBA:<br><code style='font-family: monospace;'>MMCCCC<br><u>345612</u><br>56.834<br>78.056<br>90.278<br><u>12.490</u><br>EDxCBA<br></code>Rotating the constant in the 'change' division of the key, how many total master keys will we get under each master key?",
+{ "question": "Looking at this KBA:<br><code style='font-family: monospace;'>MMCCCC<br><u>345612</u><br>56.834<br>78.056<br>90.278<br><u>12.490</u><br>EDxCBA<br></code>Rotating the constant in the 'change' division of the key, how many total change keys will we get under each master key?",
   "howMany" : 4, "option": ["", "256", "512", "64", "48"],
   "isOther" : false } ,
 { "question": "Looking at this KBA:<br><code style='font-family: monospace;'>MMMCCC<br><u>345612</u><br>5..83.<br>7..05.<br>9..27.<br><u>1..49.</u><br>CxxBAx<br></code>Rotating the constants, how many master keys will we get?",
