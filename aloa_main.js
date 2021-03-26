@@ -21,7 +21,7 @@ var TOC = [ {} , {
         "description" : "Rotating Constant<br>Three Levels" } , {
     "fileName" : "class9.html", "active" : true, "title" : "Lesson 9",
         "description" : "Designing<br>Master Key Systems" } , {
-    "fileName" : "class10.html", "active" : false, "title" : "Lesson 10",
+    "fileName" : "class10.html", "active" : true, "title" : "Lesson 10",
         "description" : "Master Keying with<br>SFIC and LFIC" } , {
     "fileName" : "class11.html", "active" : false, "title" : "Lesson 11",
         "description" : "Master Key System<br>Maintenance" } , {
