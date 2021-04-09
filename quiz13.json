@@ -1,6 +1,6 @@
 [ {} ,
     { "question": "What does the age of a master key system say about its accuracy?",
-        "howMany" : 2, "option": ["There is no connection.", "Older systems tend to contain more mistakes.", "Newer systems tend to contain more mistakes."],
+        "howMany" : 2, "option": ["There is no connection.", "The mistakes tend to increase as a system gets older.", "The mistakes tend to decrease as a system gets older."],
         "isOther" : false } ,
       { "question": "What does the size of a master key system say about its accuracy?",
         "howMany" : 2, "option": ["There is no connection.", "Larger systems tend to contain more mistakes.", "Smaller systems tend to contain more mistakes."],

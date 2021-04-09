@@ -29,7 +29,7 @@ var TOC = [ {} , {
         "description" : "Hacking and Decoding<br>MK Systems" } , {
     "fileName" : "class13.html", "active" : true, "title" : "Lesson 13",
         "description" : "Working with Large<br>Master Key Systems" } , {
-    "fileName" : "class14.html", "active" : false, "title" : "Lesson 14",
+    "fileName" : "class14.html", "active" : true, "title" : "Lesson 14",
         "description" : "Keeping Systems<br>Separate" } , {
     "fileName" : "class15.html", "active" : false, "title" : "Lesson 15",
         "description" : "Expanding an<br>Exhausted Master Key" } , {
