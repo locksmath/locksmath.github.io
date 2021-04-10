@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA MK course, Requirements</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Requirements for Designation</b></h3></p>Spring 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        <h3>Requirements for the AMKS Designation</h3>
+        <p>If you wish to earn the designation of <strong>ALOA Master Keying Specialist</strong>, this course
+        is the way to do that. Specifically, you must do each of the following:<br>
+        <ol><li>Attend all the classes.</li>
+        <li>Pass all the quizzes.</li>
+        <li>Complete all the homework.</li>
+        <li>Pass the final exam.</li></ol></p>
+        <p>You should receive an email when you have completed steps 1-3, informing you that you are eligible
+        for step 4. At that point, you should contact the ALOA Education Office to schedule an appointment for
+        you to take the final exam.
+        </p>
+
+        <!-- <a href="pres1.html"><img src="correct3.gif"; height= 150px></a>
+        <a href="powerpoint03-fundamentals.pdf">powerpoint03-progressing.pdf</a> -->
+    </div>
+    <div id="lower">
+        <h3>Frequently Asked Questions</h3>
+        <p>Q: What if I missed a few classes?<br>A: You may make up for what you missed by watching the video
+        record of those classes. You may have received a link and password for the recordings, in your email.
+        If you did not receive the link, or if you need it sent again, contact the ALOA Education Office.</p>
+        <p>Q: How do I know if I completed all the quizzes and homework?<br>A: At the end of the course, you
+        should receive an email from your instructor, listing the assignments you have not completed (if any).</p>
+        <p>Q: What if I didn't pass one of the quizzes?<br>A: You may take any of the quizzes as many times
+        as you like, until you obtain a passing score.</p>
+        <p>Q: What's the deadline for completing all the homework?<br>A: There is no specific deadline, but it
+        would be wise to submit all your homework within two to four weeks, while the lessons are still fresh
+        in your mind.</p>
+        <p>Q: What if I passed all the quizzes but some of my scores didn't get submitted?<br>A: Take a screen
+        shot of your quiz score(s) and email it to your instructor.</p>
+        <p>Q: What's if some of my homework was marked as "please resubmit"?<br>A: If your homework contains a
+        significant mistake, your instructor may ask you to correct it and resubmit. Your instructor may decide
+        that your work overall is sufficient to consider it as "completed". You should receive an email at the
+        end of the course, informing you what assignments are incomplete (if any). If you did  not receive an
+        email, of if you would like an update, please email your instructor.</p>
+        <p>Q: I emailed my instructor and got no response.<br>Q: Your instructor may have a long "to-do" list.
+        Please be patient. If it's been more than five days, it's possible that your email was misplaced or
+        that your instructor is unavailable. Contact the ALOA Education Office.</p>
+    </div>
+    <div id="footer" class="banner">
+        <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
+        for website issues:  locksmath@outlook.com</strong>
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
+        function showPart2() { main.innerHTML = `<h3>Homework part two:</h3>
+        <p>You should receive instructions for part two in your email.</p>
+        <strong>Email your answers to aloamkhomework@protonmail.com , using ProtonMail for end-to-end encryption.</strong><br><br>
+        <button onclick="location.href='class${classNumber}.html'">Go back</button>` }
+    </script>
+    
+</body>
+</html>

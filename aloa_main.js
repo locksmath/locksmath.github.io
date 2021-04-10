@@ -37,7 +37,7 @@ var TOC = [ {} , {
         "description" : "Common Mistakes<br>in Master Keying" } , {
     "fileName" : "review.html", "active" : false, "title" : "Review",
         "description" : "Preparing for<br>The Final Exam" } , {
-    "fileName" : "cert.html", "active" : false, "title" : "Final",
+    "fileName" : "cert.html", "active" : true, "title" : "Final",
         "description" : "Requirements for<br>Designation" } ];
 var main = document.getElementById("lessons");
 
