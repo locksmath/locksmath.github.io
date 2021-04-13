@@ -17,7 +17,7 @@
   { "question": "Positive locking...",
     "howMany" : 4, "option": ["", "occurs when a key positions the pins such that the separation<br>between top pin, bottom pin and master pin are all above the shear line.", "occurs when a key positions the pins such that the separation<br>between top pin, bottom pin and master pin are all below the shear line.", "provides good protection against keys being filed down to operate another cylinder.", "is not possible in master keyed cylinders."],
     "isOther" : false } ,
-  { "question": "Consider a master key system whose TMK has parity EEOOEE (such as 378415). Which of the following is a good choice for parity of a separate system?",
+  { "question": "Consider a master key system whose TMK has parity EEOOEE (such as 263784). Which of the following is a good choice for parity of a separate system?",
     "howMany" : 4, "option": ["It depends on the number of keyways.", "EOEOEE", "EOOOEE", "OOEEOO", "EOEOEO"],
     "isOther" : false } ,
   { "question": "In 6-pin cylinders, with two-step progression, master key systems can be kept independent by altering parity in how many positions?",

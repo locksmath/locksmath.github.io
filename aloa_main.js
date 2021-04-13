@@ -31,11 +31,11 @@ var TOC = [ {} , {
         "description" : "Working with Large<br>Master Key Systems" } , {
     "fileName" : "class14.html", "active" : true, "title" : "Lesson 14",
         "description" : "Keeping Systems<br>Separate" } , {
-    "fileName" : "class15.html", "active" : false, "title" : "Lesson 15",
+    "fileName" : "class15.html", "active" : true, "title" : "Lesson 15",
         "description" : "Expanding an<br>Exhausted Master Key" } , {
     "fileName" : "class16.html", "active" : false, "title" : "Lesson 16",
         "description" : "Common Mistakes<br>in Master Keying" } , {
-    "fileName" : "review.html", "active" : false, "title" : "Review",
+    "fileName" : "review.html", "active" : true, "title" : "Review",
         "description" : "Preparing for<br>The Final Exam" } , {
     "fileName" : "cert.html", "active" : true, "title" : "Final",
         "description" : "Requirements for<br>Designation" } ];

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA MK course, Lesson 15</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Expanding an Exhausted Master Key</b></h3></p>Spring 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        <p>What can you do when you reach the last available change key and the customer still needs more?
+        There are several techniques for squeezing change keys from under an exhausted master. The more
+        techniques you know, the more likely you are to find one that will work in your system.</p>
+        <p>In this lesson, we practice the following skills:
+        <ul><li>Elevate the master key.</li>
+        <li>Rotate the constants (if any).</li>
+        <li>Re-use old change keys.</li>
+        <li>Going in-between ("Trick One")</li>
+        <li>Selective master keying IMKs ("Trick Two")</li>
+        </ul></p>
+    </div>
+    <div id="lower">
+        The quiz is multiple choice. When you click on your answer, it will immediately turn green (if you chose
+        correctly), or red (if you chose incorrectly). At the end, you will get a score, and have the
+        option to take the quiz again. There is no limit to how many times you can take the quiz. The score
+        resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
+        to the instructor. If your score is 100%, you get a gold star.
+    </div>
+    <div id="footer" class="banner">
+        <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
+        for website issues:  locksmath@outlook.com</strong>
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
+        var classNumber = 15;
+        var quizFileName = "quiz15.json";
+        function showPart2() { main.innerHTML = `<h3>Homework part two:</h3>
+        <p>You should receive instructions for part two in your email.</p>
+        <strong>Email your answers to aloamkhomework@protonmail.com , using ProtonMail for end-to-end encryption.</strong><br><br>
+        <button onclick="location.href='class${classNumber}.html'">Go back</button>` }
+    </script>
+    <script src="quiz.js"></script>
+</body>
+</html>
