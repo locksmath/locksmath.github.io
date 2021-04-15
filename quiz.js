@@ -128,7 +128,8 @@ function endOfQuiz() {
         main.innerHTML += `Passing score is 70%. Please try again.`
     }
     main.innerHTML += `<br><br><button onclick="startQuiz()">Take the quiz again</button>`;
-    main.innerHTML += `<br><br><button onclick="location.href='class${classNumber}.html'">Return to Lesson ${classNumber}</button>`;    
+    if (returnTo) {main.innerHTML += `<br><br><button onclick="location.href='${returnTo}'">Return to Lesson ${returnTo}</button>`}
+    else {main.innerHTML += `<br><br><button onclick="location.href='class${classNumber}.html'">Return to Lesson ${classNumber}</button>`};    
     main.innerHTML += `<br><br><button onclick="location.href='aloa_main.html'">Return to main page</button>`;    
 
 }

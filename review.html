@@ -23,8 +23,9 @@
             <li>Complete all the homework.</li></ol></p>
             <p>You should receive an email when you have completed steps 1-3, informing you that you are eligible
             to take the exam. At that point, you should contact the ALOA Education Office to schedule an appointment
-            to take the final exam.<code> education@aloa.org </code>At the time of your appointment, you'll enter a
-            video chat with a proctor, who will go over the instructions with you. When you are ready, the proctor
+            to take the final exam.<code> education@aloa.org </code>The exam is in two parts, multiple choice and
+            written exercises, taken on different days. At the time of your appointment, you'll enter a video chat
+            with a proctor, who will go over the instructions with you. When you are ready, the proctor
             will show you the exam questions. You do all your work sitting in front of a webcam, while the proctor
             watches, to verify that you aren't receiving any outside help. The maximum time is two hours. When you
             finish the exam, it will be sent to your instructor for grading. You should get an email within a few
@@ -34,12 +35,12 @@
             <a href="powerpoint03-fundamentals.pdf">powerpoint03-progressing.pdf</a> -->
     </div>
     <div id="lower">
-        This quiz is longer than the other quizzes. Many of the questions require a significant amount of thought
-        before choosing an answer. When you click on your answer, it will immediately turn green (if you chose
-        correctly), or red (if you chose incorrectly). At the end, you will get a score, and have the
-        option to take the quiz again. There is no limit to how many times you can take the quiz. The score
-        resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
-        to the instructor, but this is not a requirement. This review is for your benefit only, to help you
+        <strong>This quiz is 35 questions -- quite a bit longer than the other quizzes. Many of the questions
+        require a significant amount of thought before choosing an answer.</strong>When you click on your answer, it
+        will immediately turn green (if you chose correctly), or red (if you chose incorrectly). At the end, you will
+        get a score, and have the option to take the quiz again. There is no limit to how many times you can take the
+        quiz. The score resets each time. Passing score is 70%. If you pass, you will have the option to submit your
+        score to the instructor, but this is not a requirement. This review is for your benefit only, to help you
         prepare for the bigger questions which you will see on the final exam.
     </div>
     <div id="footer" class="banner">
@@ -54,10 +55,12 @@
             localStorage.setItem(`userName`,displayName)}; 
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
         var classNumber = 17;
-        var quizFileName = "quiz17.json";
+        var quizFileName = `quiz${classNumber}.json`;
+        var returnTo = `review.html`;
         function showPart2() { main.innerHTML = `<h3>Homework part two:</h3>
-        <p>There is no written portion for this exercise.</p><br>
-        <button onclick="location.href='review.html'">Go back</button>` }
+        <p>You should receive instructions for part two in your email.</p>
+        <strong>Email your answers to aloamkhomework@protonmail.com , using ProtonMail for end-to-end encryption.</strong><br><br>
+        <button onclick="location.href='${returnTo}'">Go back</button>` }
     </script>
     <script src="quiz.js"></script>
 </body>

@@ -46,11 +46,12 @@
             localStorage.setItem(`userName`,displayName)}; 
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
         var classNumber = 15;
-        var quizFileName = "quiz15.json";
+        var quizFileName = `quiz${classNumber}.json`;
+        var returnTo = `class${classNumber}.html`;
         function showPart2() { main.innerHTML = `<h3>Homework part two:</h3>
         <p>You should receive instructions for part two in your email.</p>
         <strong>Email your answers to aloamkhomework@protonmail.com , using ProtonMail for end-to-end encryption.</strong><br><br>
-        <button onclick="location.href='class${classNumber}.html'">Go back</button>` }
+        <button onclick="location.href='${returnTo}'">Go back</button>` }
     </script>
     <script src="quiz.js"></script>
 </body>
