@@ -33,7 +33,7 @@ var TOC = [ {} , {
         "description" : "Keeping Systems<br>Separate" } , {
     "fileName" : "class15.html", "active" : true, "title" : "Lesson 15",
         "description" : "Expanding an<br>Exhausted Master Key" } , {
-    "fileName" : "class16.html", "active" : false, "title" : "Lesson 16",
+    "fileName" : "class16.html", "active" : true, "title" : "Lesson 16",
         "description" : "Common Mistakes<br>in Master Keying" } , {
     "fileName" : "review.html", "active" : true, "title" : "Review",
         "description" : "Preparing for<br>The Final Exam" } , {
