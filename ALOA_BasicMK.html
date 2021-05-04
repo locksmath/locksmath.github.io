@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA Basic MK course</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Master Keying Fundamentals</b></h3></p>May 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper" style="padding: 8px 8px; background-color: #CFFFCF; width: 704px;">
+        Welcome to the ALOA online Master Keying Fundamentals course. This is a two part class which
+        may help you prepare for the ALOA PRP Elective L30 <b>Basic Master Keying</b>.
+        Part one is on Monday and part two is on Thursday. After Monday's class, there is a
+        homework assignment, a multiple-choice quiz, which you may take live from this page.
+        <br>
+        <a href="aloa_main.html"><img src="correct3.gif"; height= 150px></a>
+    </div>
+    <div id="lower" style="padding: 8px 8px; background-color: lightgoldenrodyellow; width: 704px;">
+        <b>Quiz</b> Each quiz question is multiple choice. When you click on your answer, it will immediately
+        turn green (if you chose correctly), or red (if you chose incorrectly). At the end, you will get a score,
+        and have the option to take the quiz again. There is no limit to how many times you can take the quiz. The
+        score resets each time. Passing score is 70%. If you pass, you will have the option to submit your score
+        to the instructor. If your score is 100%, you get a gold star. When you are ready, click "Start quiz."
+    </div>
+    <div id="footer" class="banner">
+        <h3><strong>Contact us:</h3>regarding content, or website issues:  locksmath@outlook.com</strong>
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_bsettings.html'">settings</button>`;
+        var classNumber = 1;
+        var quizFileName = "quizB1.json";
+    </script>
+    <script src="quiz_Basic.js"></script>
+</body>
+</html>
