@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOA MK course</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_basicmk.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>ALOA Master Keying Fundamentals</b></h3></p>May 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        Your display name is  
+    </div>
+    <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_bsettings.html'">settings</button>`;
+    </script>
+    <script src="aloa_bsettings.js"></script>
+</body>
+</html>
