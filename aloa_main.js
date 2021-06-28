@@ -1,43 +1,43 @@
 var TOC = [ {} , {
     "fileName" : "welcome.html", "active" : true, "title" : "Introduction",
         "description" : "What to expect<br>from this class" } , {
-    "fileName" : "class0.html", "active" : true, "title" : "Prerequisites",
+    "fileName" : "class0.html", "active" : false, "title" : "Prerequisites",
         "description" : "locks, keys, and<br>basic vocabulary" } , {
     "fileName" : "class1.html", "active" : true, "title" : "Lesson 1",
         "description" : "Master Keying<br>Fundamentals" } , {
-    "fileName" : "class2.html", "active" : true, "title" : "Lesson 2",
+    "fileName" : "class2.html", "active" : false, "title" : "Lesson 2",
         "description" : "Key Schematics and<br>Keying Schedules" } , {
-    "fileName" : "class3.html", "active" : true, "title" : "Lesson 3",
+    "fileName" : "class3.html", "active" : false, "title" : "Lesson 3",
         "description" : "Progressing<br>from the KBA" } , {
-    "fileName" : "class4.html", "active" : true, "title" : "Lesson 4",
+    "fileName" : "class4.html", "active" : false, "title" : "Lesson 4",
         "description" : "Progressing<br>Multiple Pages" } , {
-    "fileName" : "class5.html", "active" : true, "title" : "Lesson 5",
+    "fileName" : "class5.html", "active" : false, "title" : "Lesson 5",
         "description" : "Cross Keying<br>without key interchange" } , {
-    "fileName" : "class6.html", "active" : true, "title" : "Lesson 6",
+    "fileName" : "class6.html", "active" : false, "title" : "Lesson 6",
         "description" : "Selective<br>Master keying" } , {
-    "fileName" : "class7.html", "active" : true, "title" : "Lesson 7",
+    "fileName" : "class7.html", "active" : false, "title" : "Lesson 7",
         "description" : "The Rotating<br>Constant Method" } , {
-    "fileName" : "class8.html", "active" : true, "title" : "Lesson 8",
+    "fileName" : "class8.html", "active" : false, "title" : "Lesson 8",
         "description" : "Rotating Constant<br>Three Levels" } , {
-    "fileName" : "class9.html", "active" : true, "title" : "Lesson 9",
+    "fileName" : "class9.html", "active" : false, "title" : "Lesson 9",
         "description" : "Designing<br>Master Key Systems" } , {
-    "fileName" : "class10.html", "active" : true, "title" : "Lesson 10",
+    "fileName" : "class10.html", "active" : false, "title" : "Lesson 10",
         "description" : "Master Keying with<br>SFIC and LFIC" } , {
-    "fileName" : "class11.html", "active" : true, "title" : "Lesson 11",
+    "fileName" : "class11.html", "active" : false, "title" : "Lesson 11",
         "description" : "Master Key System<br>Maintenance" } , {
-    "fileName" : "class12.html", "active" : true, "title" : "Lesson 12",
+    "fileName" : "class12.html", "active" : false, "title" : "Lesson 12",
         "description" : "Hacking and Decoding<br>MK Systems" } , {
-    "fileName" : "class13.html", "active" : true, "title" : "Lesson 13",
+    "fileName" : "class13.html", "active" : false, "title" : "Lesson 13",
         "description" : "Working with Large<br>Master Key Systems" } , {
-    "fileName" : "class14.html", "active" : true, "title" : "Lesson 14",
+    "fileName" : "class14.html", "active" : false, "title" : "Lesson 14",
         "description" : "Keeping Systems<br>Separate" } , {
-    "fileName" : "class15.html", "active" : true, "title" : "Lesson 15",
+    "fileName" : "class15.html", "active" : false, "title" : "Lesson 15",
         "description" : "Expanding an<br>Exhausted Master Key" } , {
-    "fileName" : "class16.html", "active" : true, "title" : "Lesson 16",
+    "fileName" : "class16.html", "active" : false, "title" : "Lesson 16",
         "description" : "Common Mistakes<br>in Master Keying" } , {
-    "fileName" : "review.html", "active" : true, "title" : "Review",
+    "fileName" : "review.html", "active" : false, "title" : "Review",
         "description" : "Preparing for<br>The Final Exam" } , {
-    "fileName" : "cert.html", "active" : true, "title" : "Final",
+    "fileName" : "cert.html", "active" : false, "title" : "Final",
         "description" : "Requirements for<br>Designation" } ];
 var main = document.getElementById("lessons");
 
