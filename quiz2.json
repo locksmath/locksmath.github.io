@@ -18,7 +18,7 @@
   "howMany" : 3, "option": ["","elevation", "plan", "section"],
   "isOther" : false } ,
 { "question": "Submittals are prepared when drawings...",
-  "howMany" : 3, "option": ["","are realeased for construction.", "are released for coordination.", "show their final revision."],
+  "howMany" : 3, "option": ["","are released for construction.", "are released for coordination.", "show their final revision."],
   "isOther" : false } ,
 { "question": "Which term is used for making a large number of change keys operate a cylinder?",
   "howMany" : 5, "option": ["","maison keying", "cross keying", "selective keying", "spaghetti keying", "super pinning"],
