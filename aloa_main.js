@@ -7,7 +7,7 @@ var TOC = [ {} , {
         "description" : "Master Keying<br>Fundamentals" } , {
     "fileName" : "class2.html", "active" : true, "title" : "Lesson 2",
         "description" : "Key Schematics and<br>Keying Schedules" } , {
-    "fileName" : "class3.html", "active" : false, "title" : "Lesson 3",
+    "fileName" : "class3.html", "active" : true, "title" : "Lesson 3",
         "description" : "Progressing<br>from the KBA" } , {
     "fileName" : "class4.html", "active" : false, "title" : "Lesson 4",
         "description" : "Progressing<br>Multiple Pages" } , {
