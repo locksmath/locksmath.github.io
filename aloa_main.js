@@ -9,7 +9,7 @@ var TOC = [ {} , {
         "description" : "Key Schematics and<br>Keying Schedules" } , {
     "fileName" : "class3.html", "active" : true, "title" : "Lesson 3",
         "description" : "Progressing<br>from the KBA" } , {
-    "fileName" : "class4.html", "active" : false, "title" : "Lesson 4",
+    "fileName" : "class4.html", "active" : true, "title" : "Lesson 4",
         "description" : "Progressing<br>Multiple Pages" } , {
     "fileName" : "class5.html", "active" : false, "title" : "Lesson 5",
         "description" : "Cross Keying<br>without key interchange" } , {
