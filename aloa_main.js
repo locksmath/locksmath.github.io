@@ -11,7 +11,7 @@ var TOC = [ {} , {
         "description" : "Progressing<br>from the KBA" } , {
     "fileName" : "class4.html", "active" : true, "title" : "Lesson 4",
         "description" : "Progressing<br>Multiple Pages" } , {
-    "fileName" : "class5.html", "active" : false, "title" : "Lesson 5",
+    "fileName" : "class5.html", "active" : true, "title" : "Lesson 5",
         "description" : "Cross Keying<br>without key interchange" } , {
     "fileName" : "class6.html", "active" : false, "title" : "Lesson 6",
         "description" : "Selective<br>Master keying" } , {
