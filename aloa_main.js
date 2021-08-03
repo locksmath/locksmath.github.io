@@ -19,7 +19,7 @@ var TOC = [ {} , {
         "description" : "The Rotating<br>Constant Method" } , {
     "fileName" : "class8.html", "active" : true, "title" : "Lesson 8",
         "description" : "Rotating Constant<br>Three Levels" } , {
-    "fileName" : "class9.html", "active" : false, "title" : "Lesson 9",
+    "fileName" : "class9.html", "active" : true, "title" : "Lesson 9",
         "description" : "Designing<br>Master Key Systems" } , {
     "fileName" : "class10.html", "active" : false, "title" : "Lesson 10",
         "description" : "Master Keying with<br>SFIC and LFIC" } , {
