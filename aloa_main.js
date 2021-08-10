@@ -23,7 +23,7 @@ var TOC = [ {} , {
         "description" : "Designing<br>Master Key Systems" } , {
     "fileName" : "class10.html", "active" : true, "title" : "Lesson 10",
         "description" : "Master Keying with<br>SFIC and LFIC" } , {
-    "fileName" : "class11.html", "active" : false, "title" : "Lesson 11",
+    "fileName" : "class11.html", "active" : true, "title" : "Lesson 11",
         "description" : "Master Key System<br>Maintenance" } , {
     "fileName" : "class12.html", "active" : false, "title" : "Lesson 12",
         "description" : "Hacking and Decoding<br>MK Systems" } , {
