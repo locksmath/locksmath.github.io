@@ -16,7 +16,7 @@
         <div id="settings"></div>
     </div>
     <div id="upper">
-        <h3>Hacking a Master Key System</h3>
+        <h3>Hacking and Decoding Master Key Systems</h3>
         <p>Every master key system can be hacked. This is one of the reasons that master keying residences is usually
         not a good idea. Here, we will practice a method for decoding a lock without disassembling it. This is
         sometimes known as the Dayton Method, or the Blaze Method. It assumes you have:</p>
@@ -31,20 +31,27 @@
         <a href="powerpoint03-fundamentals.pdf">powerpoint03-progressing.pdf</a> -->
     </div>
     <div id="lower">
-        <h3>Exercise:</h3>
-        Find the TMK of this master key system. The locks are Schlage 6-pin, master keyed with two-step progression.
-        The lock is not cross-keyed. Enter a test key and click the "Test" button, to find out whether your test key
-        turns this lock.<br><br>When you think you know the TMK, enter it here:
-        <input type="text" id="guessTMK" size="5"> <button onclick="checkMe()">Solve</button><br><br>
     </div>
     <div id="footer" class="banner">
         <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
         for website issues:  locksmath@outlook.com</strong>
     </div>
     <script>
+        login = document.getElementById("settings");
+        if (localStorage.getItem(`userName`)) {displayName = localStorage.getItem(`userName`)}
+        else {
+            var displayName = "Guest"+Math.floor(Math.random()*900000+100000);
+            localStorage.setItem(`userName`,displayName)}; 
+        login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
+
         var main = document.getElementById("lower");
         var changeKey = "358415";
         var TMK = "512853";
+        main.innerHTML = `<h3>Exercise:</h3>
+        Find the TMK of this master key system. The locks are Schlage 6-pin, master keyed with two-step progression.
+        The lock is not cross-keyed. Enter a test key and click the "Test" button, to find out whether your test key
+        turns this lock.<br><br>When you think you know the TMK, enter it here:
+        <input type="text" id="guessTMK" size="5"> <button onclick="checkMe()">Solve</button><br><br>`;
         main.innerHTML += `The change key is ${changeKey}.<br><br>Enter a test key: <input type="text" id="getKey"
         size="5"> <button onclick="testTheKey()">Test</button><br>`
         
@@ -67,6 +74,11 @@
             }   else {
                 main.innerHTML += `<p><strong>Sorry, ${guessKey} is not the TMK.</strong></p>`
             }
+
+            main.innerHTML += `<br><button onclick="startHack()">Try again</button><br><br>
+            <button onclick="location.href='class12.html'">Return to Lesson 12</button><br><br>
+            <button onclick="location.href='aloa_main.html'">Return to main page</button>`;
+
         }
     </script>
 </body>

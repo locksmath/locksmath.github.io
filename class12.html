@@ -16,8 +16,17 @@
         <div id="settings"></div>
     </div>
     <div id="upper">
-        <p>Hacking and Decoding Master Key Systems</p>
-        <p></p>
+        <h3>Hacking and Decoding Master Key Systems</h3>
+        <p>Every master key system can be hacked. This is one of the reasons that master keying residences is usually
+        not a good idea. Here, we will practice a method for decoding a lock without disassembling it. This is
+        sometimes known as the Dayton Method, or the Blaze Method. It assumes you have:</p>
+        <ul>
+            <li>access to one of the locks</li>
+            <li>a key that operates the lock</li>
+            <li>a supply of key blanks</li>
+            <li>a way to cut keys by code</li>
+        </ul>
+        <p>Starting from the change key, this method finds the TMK. Starting from the TMK, it finds the change key.</p>
         <!-- <a href="pres1.html"><img src="correct3.gif"; height= 150px></a>
         <a href="powerpoint03-fundamentals.pdf">powerpoint03-progressing.pdf</a> -->
     </div>
@@ -41,10 +50,7 @@
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
         var classNumber = 12;
         var quizFileName = "quiz12.json";
-        function showPart2() { main.innerHTML = `<h3>Homework #10 part two:</h3>
-        <p>You should receive instructions for part two in your email.</p>
-        <strong>Email your answers to aloamkhomework@protonmail.com , using ProtonMail for end-to-end encryption.</strong><br><br>
-        <button onclick="location.href='class${classNumber}.html'">Go back</button>` }
+        function showPart2() { location.href='hacking.html' };
     </script>
     <script src="quiz.js"></script>
 </body>
