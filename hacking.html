@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking</title>
+    <link rel="stylesheet" href="aloa_style.css">
+</head>
+<style>
+</style>
+<body>
+    <div id="navbar" class="banner">
+        <a href="aloa_main.html"><img src="schematic3.png"; height= 42px></a>
+        <div style="text-align: center; margin-top: -18px; line-height: 10%;">
+        <h3><b>Hacking a Master Key System</b></h3></p>Spring 2021</b></div>
+        <div id="settings"></div>
+    </div>
+    <div id="upper">
+        <h3>Hacking a Master Key System</h3>
+        <p>Every master key system can be hacked. This is one of the reasons that master keying residences is usually
+        not a good idea. Here, we will practice a method for decoding a lock without disassembling it. This is
+        sometimes known as the Dayton Method, or the Blaze Method. It assumes you have:</p>
+        <ul>
+            <li>access to one of the locks</li>
+            <li>a key that operates the lock</li>
+            <li>a supply of key blanks</li>
+            <li>a way to cut keys by code</li>
+        </ul>
+        <p>Starting from the change key, this method finds the TMK. Starting from the TMK, it finds the change key.</p>
+        <!-- <a href="pres1.html"><img src="correct3.gif"; height= 150px></a>
+        <a href="powerpoint03-fundamentals.pdf">powerpoint03-progressing.pdf</a> -->
+    </div>
+    <div id="lower">
+        <h3>Exercise:</h3>
+        Find the TMK of this master key system. The locks are Schlage 6-pin, master keyed with two-step progression.
+        The lock is not cross-keyed. Enter a test key and click the "Test" button, to find out whether your test key
+        turns this lock.<br><br>When you think you know the TMK, enter it here:
+        <input type="text" id="guessTMK" size="5"> <button onclick="checkMe()">Solve</button><br><br>
+    </div>
+    <div id="footer" class="banner">
+        <h3><strong>Contact us:</h3>regarding content:  aloamkhomework@protonmail.com<br>
+        for website issues:  locksmath@outlook.com</strong>
+    </div>
+    <script>
+        var main = document.getElementById("lower");
+        var changeKey = "358415";
+        var TMK = "512853";
+        main.innerHTML += `The change key is ${changeKey}.<br><br>Enter a test key: <input type="text" id="getKey"
+        size="5"> <button onclick="testTheKey()">Test</button><br>`
+        
+        function testTheKey() {
+            testKey = document.getElementById("getKey").value;
+            testResult = "turns.";
+            for (i=0; i<6; i++) {
+                shears = false;
+                if (testKey.charAt(i) == changeKey.charAt(i)) shears = true;
+                if (testKey.charAt(i) == TMK.charAt(i)) shears = true;
+                if (!shears) testResult = "doesn't turn.";
+            }
+            main.innerHTML += `${testKey} ${testResult}<br>`
+        };
+        
+        function checkMe() {
+            guessKey = document.getElementById("guessTMK").value;
+            if (guessKey == TMK) {
+                main.innerHTML += `<p><strong>Congratulations! You found the TMK. It is ${TMK}</strong></p>`
+            }   else {
+                main.innerHTML += `<p><strong>Sorry, ${guessKey} is not the TMK.</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
