@@ -44,26 +44,62 @@
             localStorage.setItem(`userName`,displayName)}; 
         login.innerHTML = `Welcome ${displayName}<br><button onclick="location.href='aloa_settings.html'">settings</button>`;
 
+        var scoreBoard = document.getElementById('upper');
         var main = document.getElementById("lower");
-        var changeKey = "358415";
-        var TMK = "512853";
-        main.innerHTML = `<h3>Exercise:</h3>
+        const MACS=7;
+        
+        function bad(key) {
+            var violation = true;
+            if (key.length == 6) {
+                violation = false;
+                var cut = 4;
+                var prev;
+                for (i=0; i<6; i++) {
+                    prev = cut;
+                    cut = Number(key.charAt(i));
+                    if (isNaN(cut)) { violation = true };
+                    if ( Math.abs(cut-prev) > MACS ) { violation = true }                
+                }
+            }
+            return violation
+        }
+
+        var TMK = "";
+        while (bad(TMK)) 
+        {
+            for (i=0; i<6; i++) {TMK += String(Math.floor(Math.random()*10))};
+        };
+        var changeKey = "";
+        while (bad(changeKey)) {
+            for (i=0; i<6; i++) {
+                offset = Number(TMK.charAt(i));
+                offset += 2*Math.floor(Math.random()*4+1);
+                changeKey += String((offset) % 10)
+            }
+        };
+        
+        scoreBoard.innerHTML = `<h3>Exercise:</h3>
         Find the TMK of this master key system. The locks are Schlage 6-pin, master keyed with two-step progression.
         The lock is not cross-keyed. Enter a test key and click the "Test" button, to find out whether your test key
-        turns this lock.<br><br>When you think you know the TMK, enter it here:
-        <input type="text" id="guessTMK" size="5"> <button onclick="checkMe()">Solve</button><br><br>`;
-        main.innerHTML += `The change key is ${changeKey}.<br><br>Enter a test key: <input type="text" id="getKey"
-        size="5"> <button onclick="testTheKey()">Test</button><br>`
-        
+        turns this lock.`;
+        main.innerHTML = `When you think you know the TMK, enter it here:
+        <input type="text" id="guessTMK" size="5"> <button onclick="checkMe()">Solve</button><br><br>
+        The change key is ${changeKey}.<br><br>Enter a test key: <input type="text" id="getKey"
+        size="5"> <button onclick="testTheKey()">Test</button><br>`;
+
         function testTheKey() {
             testKey = document.getElementById("getKey").value;
-            testResult = "turns.";
-            for (i=0; i<6; i++) {
-                shears = false;
-                if (testKey.charAt(i) == changeKey.charAt(i)) shears = true;
-                if (testKey.charAt(i) == TMK.charAt(i)) shears = true;
-                if (!shears) testResult = "doesn't turn.";
-            }
+            if (bad(testKey)) {
+                testResult = "is not a valid key bitting."
+            } else {
+                testResult = "turns.";
+                for (i=0; i<6; i++) {
+                    shears = false;
+                    if (testKey.charAt(i) == changeKey.charAt(i)) shears = true;
+                    if (testKey.charAt(i) == TMK.charAt(i)) shears = true;
+                    if (!shears) testResult = "doesn't turn.";
+                }
+            } 
             main.innerHTML += `${testKey} ${testResult}<br>`
         };
         
@@ -75,7 +111,7 @@
                 main.innerHTML += `<p><strong>Sorry, ${guessKey} is not the TMK.</strong></p>`
             }
 
-            main.innerHTML += `<br><button onclick="startHack()">Try again</button><br><br>
+            main.innerHTML += `<br><button onclick="location.reload()">Try again</button><br><br>
             <button onclick="location.href='class12.html'">Return to Lesson 12</button><br><br>
             <button onclick="location.href='aloa_main.html'">Return to main page</button>`;
 
