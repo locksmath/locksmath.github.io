@@ -27,7 +27,7 @@ var TOC = [ {} , {
         "description" : "Master Key System<br>Maintenance" } , {
     "fileName" : "class12.html", "active" : true, "title" : "Lesson 12",
         "description" : "Hacking and Decoding<br>MK Systems" } , {
-    "fileName" : "class13.html", "active" : false, "title" : "Lesson 13",
+    "fileName" : "class13.html", "active" : true, "title" : "Lesson 13",
         "description" : "Working with Large<br>Master Key Systems" } , {
     "fileName" : "class14.html", "active" : false, "title" : "Lesson 14",
         "description" : "Keeping Systems<br>Separate" } , {
