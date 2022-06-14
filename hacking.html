@@ -50,6 +50,7 @@
         
         function bad(key) {
             var violation = true;
+            console.log(key)
             if (key.length == 6) {
                 violation = false;
                 var cut = 4;
@@ -67,10 +68,12 @@
         var TMK = "";
         while (bad(TMK)) 
         {
+            TMK = "";
             for (i=0; i<6; i++) {TMK += String(Math.floor(Math.random()*10))};
         };
         var changeKey = "";
         while (bad(changeKey)) {
+            changeKey = "";
             for (i=0; i<6; i++) {
                 offset = Number(TMK.charAt(i));
                 offset += 2*Math.floor(Math.random()*4+1);
@@ -115,7 +118,7 @@
             <button onclick="location.href='class12.html'">Return to Lesson 12</button><br><br>
             <button onclick="location.href='aloa_main.html'">Return to main page</button>`;
 
-        }
-    </script>
+        } 
+    </script> 
 </body>
 </html>
