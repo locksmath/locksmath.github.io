@@ -1,6 +1,6 @@
 [ {} ,
   { "question": "Consider two master key systems in two locations which are near each other. They use the same brand of locks, with the same keyway, and the same number of chambers. They use the same key blanks and the same pin kit. Both systems use single-step progression and Total Position Progression. Only their TMKs are different. Which of the following is true about the progression lists of the two systems?",
-    "howMany" : 2, "option": ["", "All the keys in each list must appear in the other.", "None of the keys from one list can appear in the other.", "A few of the keys from one list may appear in the other."],
+    "howMany" : 2, "option": ["", "All the keys in one system are correct keys or incidental keys in the other.", "None of the keys from one list can appear in the other.", "A few of the keys from one system may be correct keys or incidental keys for the other."],
     "isOther" : false } ,
   { "question": "A key doesn't operate a lock when:",
     "howMany" : 4, "option": ["There is no standard definition for a key not operating.", "It does not turn on full insertion.", "It does not turn on insertion and 10 seconds of manipulation.", "It dos not turn when inserted and withdrawn to a distance of 1 full cut space.", "It does not turn unless bumped more than 11 times."],
