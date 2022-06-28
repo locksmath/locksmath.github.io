@@ -120,7 +120,10 @@ function endOfQuiz() {
         main.innerHTML += `<br>Click here to submit your score:
         <form action="https://liveformhq.com/form/0c3f090f-bd7a-4efc-8a98-99cf77ea3f14" method="POST" accept-charset="utf-8">
         <input type="hidden" name="_utf8" value="✓">
-        <input type="hidden" value="https://locksmath.github.io/class${classNumber}.html" name="_redirect" />
+        <input type="hidden" value="https://locksmath.github.io/`;
+        if (classNumber <= 16) main.innerHTML += `class${classNumber}.html" `;
+        if (classNumber == 17) main.innerHTML += `review.html" `;
+        main.innerHTML += `name="_redirect" />
         <input type="hidden" id="name" name="name" value="${localStorage.getItem("userName")}" />
         <input type="hidden" id="message" name="message" value="${tally}" />
         <button type="submit" onclick="submitted()">Submit</button></form>`};
